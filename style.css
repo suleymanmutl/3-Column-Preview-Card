@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Very-light-gray);
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+p {
+  color: var(--Transparent-white);
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.5rem;
+}
+.head {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--Very-light-gray);
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 1024px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn {
+  padding: 0.8rem;
+  border-radius: 10rem;
+  border: 2px solid #fff;
+  background-color: var(--Very-light-gray);
+  width: 9.5rem;
+  cursor: pointer;
+  font-family: "Lexend Deca", sans-serif;
+  margin-top: 3rem;
+  transition: all 0.3s ease-in;
+  font-weight: 700;
+}
+
+.btn-sedans {
+  color: var(--Bright-orange);
+}
+
+.btn-suvs {
+  color: var(--Dark-cyan);
+}
+
+.btn-luxury {
+  color: var(--Very-dark-cyan);
+}
+
+.hover-button:hover {
+  background-color: transparent;
+  color: var(--Very-light-gray);
+  border: 2px solid #fff;
+}
+
+img {
+  width: 64px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 4.1rem;
+}
+
+.card-sedans {
+  background-color: var(--Bright-orange);
+}
+
+.card-suvs {
+  background-color: var(--Dark-cyan);
+}
+
+.card-luxury {
+  background-color: var(--Very-dark-cyan);
+}
+
+.attribution {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+.attribution a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  body {
+    margin: 3rem 2rem;
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .btn{
+    margin-top: 0.5rem ;
+  }
+}
